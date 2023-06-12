@@ -3,16 +3,19 @@
   background-color: rgba(0, 0, 0, 0.733);
 }
 
-.transparent-navbar .navbar-nav .nav-link {
+.navlinks {
+  padding: 5px;
   text-decoration: none;
   color: white;
+  cursor: pointer;
 }
 
-.nav-link {
+.navlinks {
   position: relative;
 }
 
-.nav-link::before {
+
+.navlinks::before {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -23,7 +26,7 @@
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::before {
+.navlinks:hover::before {
   width: 100%;
 }
 
@@ -33,6 +36,9 @@
 @media (max-width: 768px) {
   .navbar-logo {
     width: 40px;
+  }
+  .navlinks {
+    color: black;
   }
 }
   .showcase {
@@ -85,4 +91,48 @@
 .down-arrow {
   position: absolute;
   bottom: 20px;
+}
+.weekday {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.weekday:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: yellow;
+  transition: width 0.3s ease-in-out;
+}
+
+.weekday:hover:before {
+  width: 100%;
+}
+
+.termini {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border: #eae202 2px solid;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.Collapsible__trigger {
+  font-size: 25px;
+}
+
+.time-slot {
+  margin-top: 20px;
+}
+.day-name {
+  padding-top: 10px;
 }
