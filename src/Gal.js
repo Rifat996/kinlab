@@ -1,51 +1,52 @@
-import React from 'react'
-import Container from 'react-bootstrap/esm/Container';
-import ImageGallery from "react-image-grid-gallery";
+
+import React, {useEffect, useState} from 'react'
+import { db } from './config/firebase';
+import { getDocs, collection } from 'firebase/firestore';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Col, Container, Row } from 'react-bootstrap';
+
 
 
 export default function Gal() {
-  const imagesArray = [
-    {
-      alt: "Image1's alt text",
-      caption: "Image1's description",
-      src: "https://placehold.co/600x400",
-    },
-    {
-      alt: "Image2's alt text",
-      caption: "Image2's description",
-      src: "https://placehold.co/600x400",
-    },
-    {
-      alt: "Image3's alt text",
-      caption: "Image3's description",
-      src: "https://placehold.co/600x400",
-    },
-    {
-      alt: "Image3's alt text",
-      caption: "Image3's description",
-      src: "https://placehold.co/600x400",
-    },
-    {
-      alt: "Image3's alt text",
-      caption: "Image3's description",
-      src: "https://placehold.co/600x400",
-    },
-    {
-      alt: "Image3's alt text",
-      caption: "Image3's description",
-      src: "https://placehold.co/600x400",
-    },
-    {
-      alt: "Image3's alt text",
-      caption: "Image3's description",
-      src: "https://placehold.co/600x400",
-    },
-  ];
+  const [galleryCollection, setGalleryCollection] = useState([]);
+  const galleryCollectionRef = collection(db, "galerija");
+
+  useEffect(() => {
+    const getGalleryCollection = async () => {
+      try {
+        const data = await getDocs(galleryCollectionRef);
+        const filteredData = data.docs.map((doc) => ({...doc.data()}));
+        setGalleryCollection(filteredData);
+        console.log(filteredData);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+    getGalleryCollection();
+  }, []);
+
 
 
   return (
-    <Container>
-      <ImageGallery imgArray={imagesArray} columnWidth={290} gapSize={22} />
+    <>
+    <Container className='mt-5'>
+      <Row className="justify-content-center">
+        <Col>
+        <Carousel className='text-center' showThumbs={true} showStatus={false} infiniteLoop showIndicators={false} thumbWidth={120} useKeyboardArrows={true}>
+          {galleryCollection.map((photo, k) => (
+                  <img
+                      key={k}
+                      src={photo.fotka}
+                      style={{ maxHeight: '700px', maxWidth: '500px' }}
+                      alt={`Image ${k}`}
+                  />
+          ))}
+        </Carousel>
+        </Col>
+      </Row>
     </Container>
+    
+    </>
   )
 }

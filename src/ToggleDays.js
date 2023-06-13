@@ -28,13 +28,19 @@ export default function ToggleDays() {
         getTimeSlotCollection();
       }, []);
 
-
   return (
   
   <>
-  <Container fluid style={{ marginTop: '70px' }}>
+        <style>{`
+          .schedulesection {
+              background-color: white
+              }
+        `}</style>
+
+
+  <Container className='schedulesection mt-5' fluid>
     <Row>
-      <Col className='text-center mb-5'>
+      <Col className='text-center mb-2 mt-5'>
         <h3>Raspored termina: </h3>
       </Col>
     </Row>
@@ -44,7 +50,8 @@ export default function ToggleDays() {
   
       {timeSlotCollection.map((termin, k) => (   
         <Col key={k} className='text-center termini' xs={10} sm={10} md={8}>
-            <Collapsible easing='ease-in-out' transitionTime={500} trigger={termin.dan}>
+            <Collapsible easing='ease-in-out' transitionTime={500} triggerTagName="div" 
+            trigger={termin.dan}>
                 
               <div className="time-slot">
                   <p>09:00 - 10:00 {termin.od9do10}</p>
@@ -56,6 +63,7 @@ export default function ToggleDays() {
             </Collapsible>
             </Col>
         ))}
+        <div className='mb-5'></div>
         
     </Row>
   </Container>

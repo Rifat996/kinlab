@@ -20,19 +20,21 @@ const [isVisible, setIsVisible] = useState(false);
             <Row className="justify-content-center">
                 <Col xs={12} md={4} lg={4} className='text-center overflow-hidden'>
                     <VisibilitySensor onChange={handleVisibilityChange} partialVisibility>
-                        <CountUp style={{ fontSize: '35px',  margin: '40px' }} start={isVisible ? null : 0} end={66} />
+                        <CountUp style={{ fontSize: '35px',  margin: '40px' }} start={isVisible ? null : 0} end={66}
+                        formattingFn={(value) => `+${value}`} />
                     </VisibilitySensor>
                         <h2 style={{ margin: '20px' }}>zadovoljnih klijenata</h2>
                 </Col>
                 <Col xs={12} md={4} lg={4} className='text-center overflow-hidden'>
                     <VisibilitySensor onChange={handleVisibilityChange} partialVisibility>
-                        <CountUp style={{ fontSize: '35px',  margin: '40px' }} start={isVisible ? null : 0} end={1300} />
+                        <CountUp style={{ fontSize: '35px',  margin: '40px' }} start={isVisible ? null : 0} end={1300}
+                        formattingFn={(value) => `+${value}`} />
                     </VisibilitySensor>
                         <h2 style={{ margin: '20px' }}>individualnih treninga</h2>
                 </Col>
                 <Col xs={12} md={4} lg={4} className='text-center overflow-hidden'>
                     <VisibilitySensor onChange={handleVisibilityChange} partialVisibility>
-                        <CountUp style={{ fontSize: '35px',  margin: '40px' }} start={isVisible ? null : 0} end={9} />
+                        <CountUp style={{ fontSize: '35px',  margin: '40px' }} start={isVisible ? null : 0} end={7} />
                     </VisibilitySensor>
                         <h2 style={{ margin: '20px' }}>godina iskustva</h2>
                 </Col>

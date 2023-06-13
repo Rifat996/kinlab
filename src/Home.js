@@ -7,13 +7,17 @@ import Counter from './Counter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
 import ToggleDays from './ToggleDays';
-
+import { TypeAnimation } from 'react-type-animation';
 import Logo from './imgs/kinlablogo.jpg';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import Footer from './Footer';
+import WhatsAppButton from './WhatsappChat';
+import About from './About';
+import Services from './Services';
 
 export default function Home() {
   const [videoCollection, setVideoCollection] = useState([]);
@@ -40,7 +44,7 @@ export default function Home() {
 
   return (
     <>
-   {['md'].map((expand) => (
+      {['md'].map((expand) => (
         <Navbar key={expand} expand={expand} className="mb-3 sticky-top transparent-navbar content">
           <Container fluid>
             <Navbar.Brand style={{ zIndex: '2' }} onClick={handleBrandClick}>
@@ -63,34 +67,36 @@ export default function Home() {
                 <Nav className="justify-content-end flex-grow-1 pe-3 navMenu" style={{ letterSpacing: '0.1em' }}>
 
                   <Link className='navlinks'
-                  to="gallery"
+                  to="about"
+                  smooth={true}
+                  duration={300}
+                  offset={-90}>
+                  USLUGE
+                  </Link>
+
+                  <Link className='navlinks'
+                  to="about"
+                  smooth={true}
+                  duration={300}
+                  offset={-90}>
+                  NAŠA PRIČA
+                  </Link>
+
+                  <Link className='navlinks'
+                  to="schedule"
                   smooth={true}
                   duration={300}
                   offset={-80}>
-                  GALERIJA
+                  TERMINI
                   </Link>
 
                   <Link className='navlinks'
                   to="gallery"
                   smooth={true}
                   duration={300}
-                  offset={-80}>USLUGE</Link>
-
-                  <Link className='navlinks'
-                  to="gallery"
-                  smooth={true}
-                  duration={300}
                   offset={-80}>
-                    NAŠA PRIČA
-                    </Link>
-
-                    <Link className='navlinks'
-                    to="schedule"
-                    smooth={true}
-                    duration={300}
-                    offset={-80}>
-                    DOSTUPNI TERMINI
-                    </Link>
+                  GALERIJA
+                  </Link>
 
                   <div className="dot"></div>
                 </Nav>
@@ -105,28 +111,56 @@ export default function Home() {
       <section className='showcase'>
         {videoCollection.map((video, k) => (
           <div key={k} className='video-container'>
-          <video src={video.video} autoPlay muted loop></video>
+          <video src={video.video} muted autoPlay loop></video>
         </div>
         ))}
         <div className='content'>
-          <h1>Dobrodošli u KINLAB</h1>
-          <h3>Full Screen Video Landing Page</h3>
-          <h3>
-            <Link
-              to="counter"
-              smooth={true}
-              duration={300}
-              offset={-80}
-            >
-              <FontAwesomeIcon className='down-arrow' icon={faAnglesDown} fade />
-            </Link>
-          </h3>
-        </div>
+          <TypeAnimation
+        sequence={[
+          'Dobrodošli u KINLAB!',
+          1400, 
+          'Odgovorno ispitujemo tvoje granice kroz trening prilagođen tvom tijelu i potrebama.',
+          1400,
+          'Treniraj opušteno u privatnom ambijentu u najčišćoj teretani u gradu.',
+          1400,
+          'Nema gužvi. Nema vonja. Nema čekanja na sprave. I nema modernog coaching bullshita.',
+          1400,
+          'Garantujemo rezultate, ako garantuješ da ćeš nas slušati i marljivo raditi.',
+          1400
+            ]}
+            wrapper="span"
+            speed={60}
+            deletionSpeed={90}
+            style={{ fontSize: '1.5em', display: 'inline-block', paddingTop: '40px' }}
+            repeat={Infinity}
+          />
+          </div>
+          <div style={{ zIndex: '2', position: 'absolute', bottom: '20px' }}>
+            <h5>Pogledaj dostupne termine</h5>
+            <h3>
+              <Link style={{ cursor: 'pointer' }}
+                to="schedule"
+                smooth={true}
+                duration={300}
+                offset={-80}
+              >
+                <FontAwesomeIcon icon={faAnglesDown} fade />
+              </Link>
+            </h3>
+          </div>
       </section>
 
       
       <div id="counter">
         <Counter />
+      </div>
+
+      {/* <div>
+        <Services />
+      </div> */}
+
+      <div id='about'>
+        <About />
       </div>
 
       <div id="gallery">
@@ -136,6 +170,12 @@ export default function Home() {
       <div id="schedule">
          <ToggleDays />
       </div>
+
+      <div style={{ position: "fixed", bottom: "10px", right: "30px", zIndex: "999" }}>
+      <WhatsAppButton />
+      </div>
+
+      <Footer />
     </>
   )
 }

@@ -40,7 +40,9 @@ const Root = () => {
   return <>
   <style>{`
           body {
-            font-family: 'Fjalla One', sans-serif;          }
+            font-family: 'Fjalla One', sans-serif;
+             background-color: #F8B700;
+            }
         `}</style>
 
      
