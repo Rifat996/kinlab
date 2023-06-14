@@ -10,9 +10,9 @@ function WhatsAppButton() {
 
 
   return (
-    <div style={{ maxWidth: "80px", cursor: "pointer" }} className='text-center'>
+    <div style={{ cursor: "pointer" }} className='text-center'>
     <a style={{ textDecoration: 'none' }} href={whatsappLink} target="_blank" rel="noopener noreferrer">
-      <img src={WhatsAppImg} alt="whatsappimg"></img><p style={{ color: 'white' }}>062069303</p>
+      <img style={{ width: '20px' }} src={WhatsAppImg} alt="whatsappimg"></img><p style={{ color: 'rgb(204, 204, 204)' }}>062069303</p>
     </a>
     </div>
   );

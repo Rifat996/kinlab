@@ -17,7 +17,10 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Footer from './Footer';
 import WhatsAppButton from './WhatsappChat';
 import About from './About';
-import Services from './Services';
+import Maps from './Maps';
+import { ScrollToTop } from 'react-simple-scroll-up'
+
+
 
 export default function Home() {
   const [videoCollection, setVideoCollection] = useState([]);
@@ -94,7 +97,7 @@ export default function Home() {
                   to="gallery"
                   smooth={true}
                   duration={300}
-                  offset={-80}>
+                  offset={-90}>
                   GALERIJA
                   </Link>
 
@@ -118,7 +121,7 @@ export default function Home() {
           <TypeAnimation
         sequence={[
           'Dobrodošli u KINLAB!',
-          1400, 
+          3000, 
           'Odgovorno ispitujemo tvoje granice kroz trening prilagođen tvom tijelu i potrebama.',
           1400,
           'Treniraj opušteno u privatnom ambijentu u najčišćoj teretani u gradu.',
@@ -136,7 +139,7 @@ export default function Home() {
           />
           </div>
           <div style={{ zIndex: '2', position: 'absolute', bottom: '20px' }}>
-            <h5>Pogledaj dostupne termine</h5>
+            <h6>Pogledaj dostupne termine</h6>
             <h3>
               <Link style={{ cursor: 'pointer' }}
                 to="schedule"
@@ -170,12 +173,20 @@ export default function Home() {
       <div id="schedule">
          <ToggleDays />
       </div>
+      
+      <div style={{ height: '300px', padding: 0 }}>
+         <Maps latitude={44.81324132833271} longitude={15.862880841530078} />
+      </div>
 
-      <div style={{ position: "fixed", bottom: "10px", right: "30px", zIndex: "999" }}>
+
+      <div style={{ position: "fixed", bottom: "0px", left: "20px", zIndex: "999" }}>
       <WhatsAppButton />
       </div>
 
       <Footer />
+
+      <ScrollToTop symbolColor='#F8B700' />
+
     </>
   )
 }

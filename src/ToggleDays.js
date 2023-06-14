@@ -33,7 +33,7 @@ export default function ToggleDays() {
   <>
         <style>{`
           .schedulesection {
-              background-color: white
+              background-color: #e7e7e7;
               }
         `}</style>
 

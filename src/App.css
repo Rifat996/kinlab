@@ -32,6 +32,7 @@
 
 .navbar-logo {
   width: 60px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .navbar-logo {
@@ -92,30 +93,6 @@
 .down-arrow {
   width: 50px;
 }
-.weekday {
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.weekday:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background-color: yellow;
-  transition: width 0.3s ease-in-out;
-}
-
-.weekday:hover:before {
-  width: 100%;
-}
 
 .termini {
   background-color: black;
@@ -148,17 +125,4 @@
 
 .show-more-row {
   margin-top: 20px;
-}
-
-
-.rotate {
-  animation: rotate 0.5s;
-}
-
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(-3deg); }
-  50% { transform: rotate(3deg); }
-  75% { transform: rotate(-3deg); }
-  100% { transform: rotate(0deg); }
 }
