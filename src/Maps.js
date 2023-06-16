@@ -17,10 +17,12 @@ const Map = ({ latitude, longitude }) => {
   const mapRef = useRef(null);
 
   useEffect(() => {
-    // Initialize map
     mapRef.current = L.map('map', {
       center: [latitude, longitude],
       zoom: 19,
+      scrollWheelZoom: false,
+      dragging: false,
+      touchZoom: true,
       layers: [
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution: 'Map data © OpenStreetMap contributors',
@@ -30,11 +32,10 @@ const Map = ({ latitude, longitude }) => {
 
     const marker = L.marker([latitude, longitude], { icon: customMarkerIcon }).addTo(mapRef.current);
 
-    // Add popup to the marker
     marker.bindPopup('KINLAB Bihac').openPopup();
+    
 
     return () => {
-      // Clean up map when component unmounts
       mapRef.current.remove();
     };
   }, [latitude, longitude]);

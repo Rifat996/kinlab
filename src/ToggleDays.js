@@ -6,7 +6,9 @@ import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import './App.css'
 import Collapsible from 'react-collapsible';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
+import Button from 'react-bootstrap/Button';
 
 
 export default function ToggleDays() {
@@ -39,9 +41,14 @@ export default function ToggleDays() {
 
 
   <Container className='schedulesection mt-5' fluid>
-    <Row>
-      <Col className='text-center mb-2 mt-5'>
+    <Row className='justify-content-center'>
+      <Col xs={12} md={6} lg={6} className='text-center mb-2 mt-5'>
         <h3>Raspored termina: </h3>
+        <p>
+        Ovdje možete pogledati dostupne termine za trening po danu. Ukoliko želite rezervisati neki od slobodnih termina, kliknite ispod na dugme rezerviši i direktno komunicirajte sa nama. Možete se javiti i na bilo koji drugi način putem poziva ili druge platforme na broj: <strong>062-069-303</strong>.
+        </p>
+        
+        
       </Col>
     </Row>
 
@@ -50,19 +57,26 @@ export default function ToggleDays() {
   
       {timeSlotCollection.map((termin, k) => (   
         <Col key={k} className='text-center termini' xs={10} sm={10} md={8}>
+          
             <Collapsible easing='ease-in-out' transitionTime={500} triggerTagName="div" 
-            trigger={termin.dan}>
+            trigger={<div>
+                        {termin.dan}
+                        <FontAwesomeIcon style={{ width: '15px', position: 'relative', left: '10px' }} icon={faAnglesDown} fade />
+                      </div>}>
                 
               <div className="time-slot">
-                  <p>09:00 - 10:00 {termin.od9do10}</p>
-                  <p>10:00 - 11:00 {termin.od10do11}</p>
-                  <p>11:00 - 12:00 {termin.od11do12}</p>
-                  <p>12:00 - 13:00 {termin.od12do13}</p>
-                  <p>13:00 - 14:00 {termin.od13do14}</p>
+                  <p>09:00 - 10:00 <strong>{termin.od9do10}</strong></p>
+                  <p>10:00 - 11:00 <strong>{termin.od10do11}</strong></p>
+                  <p>11:00 - 12:00 <strong>{termin.od11do12}</strong></p>
+                  <p>12:00 - 13:00 <strong>{termin.od12do13}</strong></p>
+                  <p>13:00 - 14:00 <strong>{termin.od13do14}</strong></p>
               </div>
             </Collapsible>
             </Col>
         ))}
+        <div className='text-center'>
+        <Button href='tel: 38762069303' variant="warning">Rezerviši</Button>
+        </div>
         <div className='mb-5'></div>
         
     </Row>

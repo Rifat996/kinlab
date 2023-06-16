@@ -6,6 +6,7 @@ import Gal from './Gal.js';
 import Counter from './Counter';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
+import { faAnglesUp } from '@fortawesome/free-solid-svg-icons';
 import ToggleDays from './ToggleDays';
 import { TypeAnimation } from 'react-type-animation';
 import Logo from './imgs/kinlablogo.jpg';
@@ -19,6 +20,7 @@ import WhatsAppButton from './WhatsappChat';
 import About from './About';
 import Maps from './Maps';
 import { ScrollToTop } from 'react-simple-scroll-up'
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -51,7 +53,7 @@ export default function Home() {
         <Navbar key={expand} expand={expand} className="mb-3 sticky-top transparent-navbar content">
           <Container fluid>
             <Navbar.Brand style={{ zIndex: '2' }} onClick={handleBrandClick}>
-            <img src={Logo} alt="KINLAB Logo" className="navbar-logo" />
+            <img style={{ borderRadius:'50px' }} src={Logo} alt="KINLAB Logo" className="navbar-logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}>
             <FontAwesomeIcon icon={faBars} style={{color: "#ffffff",}} />
@@ -101,6 +103,10 @@ export default function Home() {
                   GALERIJA
                   </Link>
 
+                  <NavLink className='navlinks' to="/blog">
+                    BLOG
+                  </NavLink>
+
                   <div className="dot"></div>
                 </Nav>
                 
@@ -114,7 +120,7 @@ export default function Home() {
       <section className='showcase'>
         {videoCollection.map((video, k) => (
           <div key={k} className='video-container'>
-          <video src={video.video} muted autoPlay loop></video>
+          <video src={video.video} muted loop></video>
         </div>
         ))}
         <div className='content'>
@@ -185,7 +191,7 @@ export default function Home() {
 
       <Footer />
 
-      <ScrollToTop symbolColor='#F8B700' />
+      <ScrollToTop symbol={<FontAwesomeIcon icon={faAnglesUp} style={{ color: 'white' }} />} />
 
     </>
   )
