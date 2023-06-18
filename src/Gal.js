@@ -4,6 +4,10 @@ import { getDocs, collection } from 'firebase/firestore';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Col, Container, Row, Button } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faImages } from '@fortawesome/free-solid-svg-icons';
+
+
 
 export default function Gal() {
   const [galleryCollection, setGalleryCollection] = useState([]);
@@ -47,9 +51,15 @@ export default function Gal() {
     setDisplayGallery(!displayGallery);
   };
 
+
   return (
     <>
       <Container className='mt-5'>
+        <Row className='justify-content-center'>
+          <Col className='text-center'>
+            <h3>Galerija</h3>
+          </Col>
+        </Row>
         <Row className='justify-content-center'>
           <Col>
             
@@ -87,8 +97,9 @@ export default function Gal() {
         
       </Container>
       <div className='text-center'>
-      <Button variant='secondary' onClick={toggleDisplay} className='mb-3'>
+      <Button variant='dark' size='sm' onClick={toggleDisplay} className='mb-3'>
       {buttonText}
+      <FontAwesomeIcon icon={faImages} style={{color: "#ffffff", marginLeft: '5px'}} />
       </Button>
       </div>
     </>

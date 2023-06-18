@@ -4,6 +4,7 @@ import { createBrowserRouter, createRoutesFromElements, Route, Outlet, RouterPro
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from './Home';
 import Blog from './Blog';
+import Services from './Services';
 
 
 
@@ -15,6 +16,7 @@ function App() {
       <Route path='/' element={<Root />}>
         <Route index element={<Home />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='/services' element={<Services />} />
       </Route>
       
     )

@@ -21,6 +21,11 @@ import About from './About';
 import Maps from './Maps';
 import { ScrollToTop } from 'react-simple-scroll-up'
 import { NavLink } from 'react-router-dom';
+import ReactPlayer from 'react-player';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Summary from './Summary';
+
 
 
 
@@ -47,13 +52,21 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+  
+
   return (
     <>
       {['md'].map((expand) => (
         <Navbar key={expand} expand={expand} className="mb-3 sticky-top transparent-navbar content">
           <Container fluid>
             <Navbar.Brand style={{ zIndex: '2' }} onClick={handleBrandClick}>
-            <img style={{ borderRadius:'50px' }} src={Logo} alt="KINLAB Logo" className="navbar-logo" />
+            <img style={{ borderRadius:'50%' }} src={Logo} alt="KINLAB Logo" className="navbar-logo" />
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`}>
             <FontAwesomeIcon icon={faBars} style={{color: "#ffffff",}} />
@@ -71,21 +84,10 @@ export default function Home() {
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3 navMenu" style={{ letterSpacing: '0.1em' }}>
 
-                  <Link className='navlinks'
-                  to="about"
-                  smooth={true}
-                  duration={300}
-                  offset={-90}>
-                  USLUGE
-                  </Link>
-
-                  <Link className='navlinks'
-                  to="about"
-                  smooth={true}
-                  duration={300}
-                  offset={-90}>
+                  <NavLink className='navlinks'
+                  to="/services">
                   NAŠA PRIČA
-                  </Link>
+                  </NavLink>
 
                   <Link className='navlinks'
                   to="schedule"
@@ -120,7 +122,7 @@ export default function Home() {
       <section className='showcase'>
         {videoCollection.map((video, k) => (
           <div key={k} className='video-container'>
-          <video src={video.video} muted loop></video>
+          <ReactPlayer url={video.video} playing={true} loop={true} volume={0} muted={true} playsinline></ReactPlayer>
         </div>
         ))}
         <div className='content'>
@@ -160,15 +162,15 @@ export default function Home() {
       </section>
 
       
-      <div id="counter">
+      <div data-aos="fade-up">
         <Counter />
       </div>
 
-      {/* <div>
-        <Services />
-      </div> */}
+      <div data-aos="fade-up">
+        <Summary />
+      </div>
 
-      <div id='about'>
+      <div data-aos="fade-up" id='about'>
         <About />
       </div>
 
@@ -176,11 +178,11 @@ export default function Home() {
         <Gal />
       </div>
 
-      <div id="schedule">
-         <ToggleDays />
+      <div data-aos="fade-right" id="schedule">
+        <ToggleDays />
       </div>
       
-      <div style={{ height: '300px', padding: 0 }}>
+      <div>
          <Maps latitude={44.81324132833271} longitude={15.862880841530078} />
       </div>
 

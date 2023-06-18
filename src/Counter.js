@@ -1,46 +1,53 @@
-import React, { useState } from 'react';
-import Container from 'react-bootstrap/esm/Container';
-import Row from 'react-bootstrap/esm/Row';
-import Col from 'react-bootstrap/esm/Col';
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import CountUp from 'react-countup';
-import VisibilitySensor from 'react-visibility-sensor';
-
 
 export default function Counter() {
-const [isVisible, setIsVisible] = useState(false);
-
-  const handleVisibilityChange = (isVisible) => {
-    setIsVisible(isVisible);
-  };
-
-
   return (
-    <>
-        <Container fluid style={{ marginBottom: '70px' }}>
-            <Row className="justify-content-center">
-                <Col xs={12} md={4} lg={4} className='text-center overflow-hidden'>
-                    <VisibilitySensor onChange={handleVisibilityChange} partialVisibility>
-                        <CountUp style={{ fontSize: '35px',  margin: '40px' }} start={isVisible ? null : 0} end={66}
-                        formattingFn={(value) => `+${value}`} />
-                    </VisibilitySensor>
-                        <h2 style={{ margin: '20px' }}>zadovoljnih klijenata</h2>
-                </Col>
-                <Col xs={12} md={4} lg={4} className='text-center overflow-hidden'>
-                    <VisibilitySensor onChange={handleVisibilityChange} partialVisibility>
-                        <CountUp style={{ fontSize: '35px',  margin: '40px' }} start={isVisible ? null : 0} end={1300}
-                        formattingFn={(value) => `+${value}`} />
-                    </VisibilitySensor>
-                        <h2 style={{ margin: '20px' }}>individualnih treninga</h2>
-                </Col>
-                <Col xs={12} md={4} lg={4} className='text-center overflow-hidden'>
-                    <VisibilitySensor onChange={handleVisibilityChange} partialVisibility>
-                        <CountUp style={{ fontSize: '35px',  margin: '40px' }} start={isVisible ? null : 0} end={7} />
-                    </VisibilitySensor>
-                        <h2 style={{ margin: '20px' }}>godina iskustva</h2>
-                </Col>
-            </Row>
-        </Container>
-    </>
-
-  )
+    <Container fluid style={{ marginBottom: '70px' }}>
+      <Row className="justify-content-center">
+        <Col xs={12} md={4} lg={3} className='text-center overflow-hidden'>
+          <div>
+            <CountUp
+              start={0}
+              end={66}
+              duration={2.5}
+              separator=","
+              suffix="+"
+              enableScrollSpy={true}
+              style={{ fontSize: '35px', margin: '40px' }}
+            />
+            <h2 style={{ margin: '20px' }}>zadovoljnih klijenata</h2>
+          </div>
+        </Col>
+        <Col xs={12} md={4} lg={3} className='text-center overflow-hidden'>
+          <div>
+            <CountUp
+              start={0}
+              end={1300}
+              duration={3}
+              separator=","
+              suffix="+"
+              enableScrollSpy={true}
+              style={{ fontSize: '35px', margin: '40px' }}
+            />
+            <h2 style={{ margin: '20px' }}>individualnih treninga</h2>
+          </div>
+        </Col>
+        <Col xs={12} md={4} lg={3} className='text-center overflow-hidden'>
+          <div>
+            <CountUp
+              start={0}
+              end={7}
+              duration={1.5}
+              style={{ fontSize: '35px', margin: '40px' }}
+            />
+            <h2 style={{ margin: '20px' }}>godina iskustva</h2>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  );
 }

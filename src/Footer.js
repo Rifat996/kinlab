@@ -9,12 +9,12 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-light p-5 mt-5">
+    <footer className="bg-black text-light p-5">
       <Container>
         <Row>
           <Col md={6} className="text-md-left">
-            <h5><img src={Logo} alt="KINLAB Logo" className="navbar-logo mb-3 mt-5" /></h5>
-            <p>NEKI GLUPI KOMENTAR DA ME KLIKNES</p>
+            <h5><img style={{ borderRadius: '50px' }} src={Logo} alt="KINLAB Logo" className="navbar-logo mb-3 mt-5" /></h5>
+            <p>COMMIT TO BE FIT</p>
           </Col>
           <Col md={6} className="text-md-right mt-5">
             <h5>KONTAKT</h5>

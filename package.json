@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "aos": "^2.3.4",
     "bootstrap": "^5.3.0",
     "firebase": "^9.22.1",
     "leaflet": "^1.9.4",
@@ -17,13 +18,13 @@
     "react-collapsible": "^2.10.0",
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
+    "react-player": "^2.12.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.12.0",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
     "react-simple-scroll-up": "^0.2.3",
     "react-type-animation": "^3.1.0",
-    "react-visibility-sensor": "^5.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

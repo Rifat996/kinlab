@@ -8,6 +8,7 @@ import './App.css'
 import Collapsible from 'react-collapsible';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
+import { faCalendarCheck } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
 
 
@@ -74,10 +75,10 @@ export default function ToggleDays() {
             </Collapsible>
             </Col>
         ))}
-        <div className='text-center'>
-        <Button href='tel: 38762069303' variant="warning">Rezerviši</Button>
+        <div className='text-center mb-3'>
+        <Button href='tel: 38762069303' variant="warning">Rezerviši
+        <FontAwesomeIcon icon={faCalendarCheck} style={{color: "black", marginLeft: '8px'}} /></Button>
         </div>
-        <div className='mb-5'></div>
         
     </Row>
   </Container>
