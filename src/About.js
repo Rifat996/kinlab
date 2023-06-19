@@ -42,7 +42,7 @@ export default function About() {
             </Col>
             <Col className='text-center d-flex flex-column align-items-center' xs={12} md={12} lg={12}>
               <Button href='/services' variant='dark'>
-                Detaljan vodič kroz naš program i pristup radu
+              Detaljno o Kinlab iskustvu
                 <FontAwesomeIcon icon={faArrowRightLong} style={{color: "#ffffff", marginLeft: '5px'}} />
               </Button>
             </Col>
