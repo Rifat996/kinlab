@@ -18,7 +18,7 @@ export default function Gal() {
   const equipmentCollectionRef = collection(db, 'spravegalerija');
 
   const [displayGallery, setDisplayGallery] = useState(true);
-  const buttonText = displayGallery ? 'Slike sprava' : 'Sve slike';
+  const buttonText = displayGallery ? 'Sprave' : 'Sve slike';
   useEffect(() => {
     const getGalleryCollection = async () => {
       try {

@@ -64,13 +64,18 @@ export default function ToggleDays() {
                         {termin.dan}
                         <FontAwesomeIcon style={{ width: '15px', position: 'relative', left: '10px' }} icon={faAnglesDown} fade />
                       </div>}>
-                
+                <hr />
               <div className="time-slot">
                   <p>09:00 - 10:00 <strong>{termin.od9do10}</strong></p>
                   <p>10:00 - 11:00 <strong>{termin.od10do11}</strong></p>
                   <p>11:00 - 12:00 <strong>{termin.od11do12}</strong></p>
                   <p>12:00 - 13:00 <strong>{termin.od12do13}</strong></p>
                   <p>13:00 - 14:00 <strong>{termin.od13do14}</strong></p>
+                  <p>15:00 - 16:00 <strong>{termin.od15do16}</strong></p>
+                  <p>16:00 - 17:00 <strong>{termin.od16do17}</strong></p>
+                  <p>17:00 - 18:00 <strong>{termin.od17do18}</strong></p>
+                  <p>18:00 - 19:00 <strong>{termin.od18do19}</strong></p>
+                  <p>19:00 - 20:00 <strong>{termin.od19do20}</strong></p>
               </div>
             </Collapsible>
             </Col>

@@ -12,10 +12,14 @@ export default function Summary() {
           <Col className='text-center' xs={10} md={10} lg={12}>
             <h3>Lorem Ipsum Dolor Sit Amet</h3>
           </Col>
-          <Col xs={10} md={10} lg={12}>
+          <Col xs={10} md={10} lg={6}>
             <p>
-            Lorem Ipsum halo is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+            Kinlab, osnovan od strane stručnjaka kineziologije Harisa Šabića, predstavlja idealnu destinaciju za one koji teže poboljšanju fizičkog izgleda, razvijanju zdravih navika i unapređenju kvalitete života. Koncept rada Kinlaba utemeljen je na individualnom pristupu, gdje se svakom klijentu pristupa personalizirano, uz maksimalno tri osobe po grupi.
+            </p>
+          </Col>
+          <Col xs={10} md={10} lg={6}>
+            <p>
+            Kinlab, osnovan od strane stručnjaka kineziologije Harisa Šabića, predstavlja idealnu destinaciju za one koji teže poboljšanju fizičkog izgleda, razvijanju zdravih navika i unapređenju kvalitete života. Koncept rada Kinlaba utemeljen je na individualnom pristupu, gdje se svakom klijentu pristupa personalizirano, uz maksimalno tri osobe po grupi.
             </p>
           </Col>
         </Row>
