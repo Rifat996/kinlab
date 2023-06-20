@@ -158,6 +158,14 @@ const BlogModal = ({ blog, showModal, setShowModal }) => {
           <p>{blog.pasus1}</p>
           <p>{blog.pasus2}</p>
           <p>{blog.pasus3}</p>
+          <p>{blog.pasus4}</p>
+          <img className='img-fluid mb-3' src={blog.fotka2} alt="Blog Image2" />
+          <p>{blog.pasus5}</p>
+          <p>{blog.pasus6}</p>
+          <p>{blog.pasus7}</p>
+          <p>{blog.pasus8}</p>
+          <p>{blog.pasus9}</p>
+          <p>{blog.pasus10}</p>
         </div>
       </Modal.Body>
       <Modal.Footer>

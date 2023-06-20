@@ -73,9 +73,15 @@ export default function Services() {
                 </h3>
                 <p>
                 Svi pričaju o nekom individualiziranom pristupu, a onda vas stave u grupu od 20 ljudi, sa 3 fiksna termina i jednakim vježbama za cijelu grupu koja je sačinjena od totalno različitih profila i potreba treniranja. Sve to pored ostalih ljudi koji su u teretani samostalno, tako da nemate ni privatnosti ni dostupne tegove i sprave u svakom trenutku. Individualizirano je šta tačno?
+                <br />
+                <br />
                 Mi smo prvi studio za individualni trening u gradu. Naša teretana i prostor za trening nisu otvorenog tipa, što znači da treniraju isključivo ljudi sa terminima. A radimo od 1na1 pristupa do maksimalno 3 osobe u grupi u jednom terminu. To omogućuje zaista individualiziran pristup i maksimalnu posvećenost specifičnom profilu i potrebama klijenta. 
-                Kad započinjemo saradnju, najprije razgovaramo o tvojim potrebama i željama. Onda skeniramo trenutno stanje i prema mogućnostima definiramo ciljeve i individualni plan treninga. Potom se dogovoramo za termine u kojima ćeš dolaziti. 
+                Kad započinjemo saradnju, najprije razgovaramo o tvojim potrebama i željama. Onda skeniramo trenutno stanje i prema mogućnostima definiramo ciljeve i individualni plan treninga. Potom se dogovoramo za termine u kojima ćeš dolaziti.
+                <br />
+                <br /> 
                 Od prvog treninga pa nadalje, tvoj trener je tvoja stalna podrška kojem se možeš obratiti uvijek i za sva moguća pitanja. Čak i kad je finale Lige prvaka ili kad trener pokušava sastaviti IKEA ormar u jedinom slobodnom satu tokom dana. Ili kad imaš genijalno pitanje sa neta, tipa može li se predozirati proteinima? Trener će ti uvijek odgovoriti maksimalno strpljivo i argumentovano. 
+                <br />
+                <br />
                 Dajemo i predložak namirnica za ishranu, koji nije i ne mijenja službeni nutricionistički program, već je dodatak našim uslugama i služi postizanju najboljih mogućih rezultata, a temelji se na općim smjernicama za zdravu prehranu, prilagođenu ljudima koji dižu utege i žele poboljšati životni stil.
                 Sve ovo radimo uz pravi individualan i na dokazima utemeljen pristup, zasnovan na najnovijim znanstvenim istraživanjima u području kineziologije, sportske medicine i fitnessa. Nema modernog coaching bullshita, samo provjereni i naučni izvori. Sve informacije, programi i tehnike su up-to-date.
                 </p>
@@ -84,9 +90,16 @@ export default function Services() {
                 </h3>
                 <p>
                 Za početak higijena. Nas iz Kinlaba lagano voza OKP što se tiče čistoće,  što je za vas odlično. Teretana se čisti svakodnevno i baš nikada nećete tokom svog treninga zateći teretanu sa neugodnim mirisima i rezultatima napora ljudi koji su bili tu prije vas. 
-                Već smo naveli da radimo sa maksimalno 3 ljudi odjednom u grupi, što znači da imaš svu komociju i privatnost ovog svijeta dok treniraš. To znači i da tijekom sat vremena svog termina nećeš biti zapostavljen/a što se tiče svih mogućih pitanja, tehnike izvođenja vježbi i generalne podrške tokom treninga.  
+                Već smo naveli da radimo sa maksimalno 3 ljudi odjednom u grupi, što znači da imaš svu komociju i privatnost ovog svijeta dok treniraš.
+                <br />
+                <br />
+                 To znači i da tijekom sat vremena svog termina nećeš biti zapostavljen/a što se tiče svih mogućih pitanja, tehnike izvođenja vježbi i generalne podrške tokom treninga.  
                 Dakle, Finska ima najbolje obrazovanje jer ima jednog nastavnika na 7.7 učenika u prosjeku, a Kinlab ima zaista individualiziran i kvalitetan pristup jer trener ima maksimalno 3 ljudi u fokusu tijekom jednog termina. Ljepota ovog načina treninga je i što nema gužvi, pa ne morate čekati da neki napucani tebranona završi 14. seriju jedne vježbe u kojoj je pokupio sve utege koji vam trebaju.
+                <br />
+                <br />
                 Teretana i prostor za vježbanje su uređeni savremeno po globalnim i aktuelnim trendovima, a opremu smo uvezli iz EU. Imamo zaista bogatu ponudu mašina, sprava i utega. Sve je novo i nije podleglo pretjeranom i neodgovornom korištenju. U našoj teretani nećete naći zahrđale i istrošene sprave koje su prošle kroz hiljadu ruku, često neiskusnih korisnika. Zahvaljujući individualiziranom pristupu i stalnom nadzoru naših trenera, svaki član naše teretane je educiran o pravilnom korištenju sprava i utega, što osigurava da naša oprema ostane u top stanju, kao prvog dana.
+                <br />
+                <br />
                 Ono što nas izdvaja od drugih u pogledu opreme su neke mašine, sprave i specifični utezi koje nećete naći unaokolo, a neke od njih su:  DAP mašina, belt squat, seated leg curl (podesiv po uglovima), nožna ekstenzija podesiva po uglovima, hip truster, “Concept 2” veslački ergometar (najbolja sprava ovog tipa na svijetu), power rack, platforma za dizanje utega i open trap bar…
                 Eh da, imamo i 200 kila bumpera. To su vam oni gumeni utezi koje možete baciti na pod kad završite ili se naljutite na trenera jer vas je malo isforsirao. Ali ne na trenera! Možda onaj od kile ako je baš bezobrazan?
                 </p>
@@ -102,6 +115,8 @@ export default function Services() {
                 <p>
                 Odgovor je jednostavan - zato što smo više od teretane, više od treninga, više od znoja i utezanja. Mi smo vaš najbliži krug, vaše pleme koje podržava vaše putovanje prema zdravlju, snazi i dobrim navikama. Mi smo vaš Kinlab.
                 Mi smo tu da bismo s vama podijelili znanje, pružili podršku i kreirali personalizirane planove i programe koji su prilagođeni samo vama. Vi ste za nas jedinstveni, a ne samo još jedan broj u teretani. Nema laži, nema prikrivanja, samo čisti, nepatvoreni rezultati. I ono najvažnije - mi stojimo iza svog rada i svojih obećanja.
+                <br />
+                <br />
                 Na kraju dana, ako niste zadovoljni, nismo ni mi. Stoga, ukoliko smatrate da nismo ispunili očekivanja, dajemo garanciju za povrat novca. No, ima razlog zašto ovo još nijednom nije bio slučaj. Zato što kod nas, vi niste samo klijenti - vi ste dio našeg plemena. Dobrodošli u Kinlab.
                 </p>
                 </Col>
