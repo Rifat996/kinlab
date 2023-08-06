@@ -19,9 +19,9 @@ const Footer = () => {
           <Col md={6} className="text-md-right mt-5">
             <h5>KONTAKT</h5>
             <ul className="list-unstyled">
-              <li>Adresa: 123 Ulica, Bihac, Bosna i Hercegovina</li>
-              <li>Telefon: +1234567890</li>
-              <li>Email: info@kinlab.com</li>
+              <li>Adresa: Harmanska 66, Bihac, Bosna i Hercegovina</li>
+              <li>Telefon: +38763797720</li>
+              <li>Email: kinlab.bihac@gmail.com</li>
               <li>
                 <Link to='https://www.instagram.com/kinlab.ba/' style={{color: "#ffffff"}}>
                 <FontAwesomeIcon icon={faHashtag} bounce style={{color: "#ffffff"}} />

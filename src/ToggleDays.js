@@ -46,7 +46,7 @@ export default function ToggleDays() {
       <Col xs={12} md={6} lg={6} className='text-center mb-2 mt-5'>
         <h3>Raspored termina: </h3>
         <p>
-        Ovdje možete pogledati dostupne termine za trening po danu. Ukoliko želite rezervisati neki od slobodnih termina, kliknite ispod na dugme rezerviši i direktno komunicirajte sa nama. Možete se javiti i na bilo koji drugi način putem poziva ili druge platforme na broj: <strong>062-069-303</strong>.
+        Ovdje možete pogledati dostupne termine za trening po danu. Ukoliko želite rezervisati neki od slobodnih termina, kliknite ispod na dugme rezerviši i direktno komunicirajte sa nama. Možete se javiti i na bilo koji drugi način putem poziva ili druge platforme na broj: <strong>+38763797720</strong>.
         </p>
         
         
@@ -71,6 +71,7 @@ export default function ToggleDays() {
                   <p>11:00 - 12:00 <strong>{termin.od11do12}</strong></p>
                   <p>12:00 - 13:00 <strong>{termin.od12do13}</strong></p>
                   <p>13:00 - 14:00 <strong>{termin.od13do14}</strong></p>
+                  <p>14:00 - 15:00 <strong>{termin.od14do15}</strong></p>
                   <p>15:00 - 16:00 <strong>{termin.od15do16}</strong></p>
                   <p>16:00 - 17:00 <strong>{termin.od16do17}</strong></p>
                   <p>17:00 - 18:00 <strong>{termin.od17do18}</strong></p>
@@ -80,8 +81,11 @@ export default function ToggleDays() {
             </Collapsible>
             </Col>
         ))}
+        <div className='text-center mt-3'>
+              <p>NAPOMENA: Zbog prirode posla i našeg načina rada, njegujemo obrazac i tendenciju po kojima trenirate svako dva dana u istom terminu, ali se trudimo izaći u susret i biti fleksibilni kad god imate potrebu za promjenom termina.</p>
+        </div>
         <div className='text-center mb-3'>
-        <Button href='tel: 38762069303' variant="warning">Rezerviši
+        <Button href='tel: 38763797720' variant="warning">Rezerviši
         <FontAwesomeIcon icon={faCalendarCheck} style={{color: "black", marginLeft: '8px'}} /></Button>
         </div>
         
